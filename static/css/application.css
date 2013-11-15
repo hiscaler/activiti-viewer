@@ -1,0 +1,1070 @@
+/* 
+Document   : application
+Created on : 2013-10-23.21-10-06
+Author     : hiscaler
+Description: 主样式
+*/
+/*******************************************************************************
+ * Common
+ ******************************************************************************/
+html, body {
+    font-family: \5FAE\8F6F\96C5\9ED1, Tahoma,"宋体";
+    font-size: 13px;
+    color: #333333;
+    padding: 0;
+    height: 100%;
+    background: #F5F5F5 url(about:blank);
+    background-attachment: fixed;
+}
+body, div, dl, dt, dd, ul, ol, li, pre, form, fieldset, input, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #4362BF;
+    font-size: 12px;
+    text-decoration: none;
+}
+a:hover {
+    color: #4362BF;
+    text-decoration: underline;
+}
+fieldset, img {
+    border: 0 none;
+}
+address, caption, cite, code, dfn, em, th, var, i {
+    font-style: normal;
+    font-weight: normal;
+}
+ol li, ul li {
+    list-style: none outside none;
+}
+caption, th {
+    text-align: left;
+}
+q:before, q:after {
+    content: "";
+}
+/*table {
+    table-layout: fixed;
+}*/
+th, td {
+    vertical-align: middle;
+}
+i {
+    display: inline;
+    overflow: hidden;
+    font-size: 12px;
+}
+iframe {
+    background-color: #FFFFFF;
+}
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 2px;
+}
+input {
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    font-family: Tahoma,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    outline: medium none;
+}
+label input {
+    font-size: 12px;
+    position: relative;
+    top: 2px;
+}
+textarea {
+    font-size: 12px;
+    overflow: auto;
+    padding: 1px 0 0 1px;
+}
+select {
+    font-size: 12px;
+}
+cite {
+    display: none;
+    line-height: 33px;
+    text-indent: -999px;
+}
+.wrapper {
+    display: block;
+    margin-bottom: .6em;
+    *zoom: 1;
+}
+.bold {
+    font-weight: bold;
+}
+/* 清除浮动 */
+.clearfix:after, .wrapper:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+}
+.clearfix, .wrapper {display:block;}
+.clear {clear:both;}
+
+.hidden {
+    display: none;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+.container:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+}
+.container {
+    display: block;
+}
+.inner {
+    padding: 10px;
+}
+.ptb {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.inner-p10 {
+    padding: 10px;
+}
+/*******************************************************************************
+ * Detail view
+ ******************************************************************************/
+table.detail-view .null {
+    color: pink;
+}
+table.detail-view {
+    background: white;
+    border-collapse: collapse;
+    margin: 0;
+    width: 100%;
+}
+table.detail-view th, table.detail-view td {
+    border: 1px #d5d5d5 solid;
+    font-size: 12px;
+    padding: 8px;
+    vertical-align: top;
+}
+table.detail-view th {
+    text-align: left;
+    font-weight: bold;
+    width: 100px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #999999;
+}
+table.detail-view tr.odd {
+    background: #E5F1F4;
+}
+table.detail-view tr.even {
+    background: #F8F8F8;
+}
+table.detail-view tr.odd th {
+    background: #F8F8F8;
+}
+table.detail-view tr.even th {
+    background: #F8F8F8;
+}
+/*******************************************************************************
+ * data list
+ ******************************************************************************/
+ul.list {}
+ul.list li {
+    line-height: 30px;
+    background: url("../images/bullet-blue.png") no-repeat left center;
+    padding-left: 16px;
+    border-bottom: #F5F5F5 solid 1px;
+}
+ul.list li.left {
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+}
+ul.list li em {
+    float: right;
+    color: #A2A4A5;
+}
+/*******************************************************************************
+ * 布局
+ ******************************************************************************/
+/** 布局基础样式 **/
+.col-main {
+    float: left;
+    width: 100%;
+    /* bug fix: 主栏没有内容时，在 Firefox 和 Chrome 等浏览器下，布局不对 */
+    min-height: 1px;
+}
+.col-sub, .col-extra,
+.col-sub-issues, .col-extra-issues {
+    float: left;
+    /*position: relative; 按需设置，仅在需要时添加 */
+}
+/** 清除浮动 **/
+.layout:after,
+.main-wrap:after, .col-sub:after, .col-extra:after,
+.main-wrap-issues:after, .col-sub-issues:after, .col-extra-issues:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+}
+.layout,
+.main-wrap, .col-sub, .col-extra,
+.main-wrap-issues, .col-sub-issues, .col-extra-issues {
+    *zoom: 1;
+}
+.grid-s6m0e0 .main-wrap { margin: 0 0 0 161px; }
+.grid-s6m0e0 .col-sub {
+    width: 160px;
+    margin-left: -100%;
+    background-color: #F5F5F5;
+    border-right: #E9E9E9 solid 1px;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+.grid-s6m0e0 .col-extra {}
+.grid-s6m0e0 .main-wrap-issues { margin: 0 0 0 161px; }
+.grid-s6m0e0 .col-sub-issues {
+    width: 160px;
+    margin-left: -100%;
+    background-color: #F5F5F5;
+    border-right: #E9E9E9 solid 1px;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+#page-hd {
+    width: 100%;
+    height: 47px;
+    line-height: 47px;
+    margin: 0 auto;
+    background: #FFF none;
+}
+#page-bd {
+    margin: 0 auto;
+    /*overflow: hidden;*/
+    padding-bottom: 10px;
+    background: #FFF none;
+}
+#page-ft {
+    width: 100%;
+    border-top: 1px solid #E9E9E9;
+}
+/* normal page */
+.normal-page {
+    width: 950px;
+    margin: 0 auto;
+}
+.normal-page .npl {
+    display: block;
+    float: left;
+    width: 600px;
+    margin-right: 10px;
+}
+.normal-page .npr {
+    display: block;
+    float: left;
+    width: 340px;
+}
+/*******************************************************************************
+ * Header
+ ******************************************************************************/
+#header {
+    background-color: #007AC0;
+    border-bottom: 1px solid #B9DDFA;
+    font-size: 24px;
+    height: 47px;
+    opacity: 1;
+    top: 0;
+    width: 100%;
+    z-index: 990;
+    color: #FFF;
+    position: fixed;
+    top: 0;
+    /* IE6 */
+    _position: absolute;
+    _top: expression(documentElement.scrollTop + "px");
+}
+#header #main-menu,
+#header #header-account-manage {
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    height: 47px;
+    z-index: 1000;
+}
+#header #logo {
+    width: 183px;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+#header #logo img {
+    width: 183px;
+    height: 47px;
+}
+#header li {
+    float: left;
+    height: 47px;
+    line-height: 47px;
+    overflow: hidden;
+    display: inline-block;
+}
+#header li a {
+    height: 47px;
+    line-height: 47px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    float: left;
+    padding: 0 15px;
+}
+#header li a i {
+    margin-left: 10px;
+}
+#header li.last {
+    float: right;
+    margin-right: 10px;
+}
+#header li.last a {
+    background: none;
+}
+#header li.active a {
+    color: #DD4B39;
+    text-decoration: none;
+    border-top: 2px solid #DD4B39;
+    line-height: 47px;
+    font-weight: bold;
+}
+#header li a:hover {
+    text-decoration: none;
+    background-color: #055F98;
+}
+/* main menu */
+#main-menu {
+    left: 0;
+    color: #FFF;
+    margin-left: 220px;
+}
+/* Header account manage */
+#header-account-manage {
+    right: 0;
+}
+#header-account-manage .header-settings {
+    background: url('../images/icons.png') no-repeat -1776px -16px!important;
+    margin: 10px 0;
+}
+#header-account-manage li a {
+    padding: 0 10px;
+}
+#header-account-manage li.drop a {
+    background-color: #4C4C4C;
+}
+#header-account-manage li ul {
+    width: 170px;
+    border-left: #000 solid 2px;
+    border-bottom: #000 solid 2px;
+    clear: both;
+    position: fixed;
+    margin-top: 36px;
+    right: 0px;
+    background-color: #4C4C4C;
+}
+#header-account-manage li ul li {
+    display: block;    
+    float: right;
+    width: 90px;
+    height: 24px;
+    line-height: 24px;
+}
+#header-account-manage li ul li a {
+    display: block;
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+}
+#header-account-manage li ul li a:hover {
+    background: none;
+    text-decoration: underline;
+}
+#header-account-manage li ul li.avatar {
+    width: 70px;
+    overflow: hidden;
+    height: 72px;
+    line-height: 72px;
+    float: left;
+    text-align: center;
+}
+#header-account-manage li ul li.avatar img {
+    vertical-align: middle;
+    margin: 10px auto;
+    width: 55px;
+    height: 55px;
+    border-radius: 3px;
+}
+#header-account-manage li ul li.avatar a {
+    height: 72px;
+    line-height: 72px;
+    float: left;
+    position: absolute;
+}
+#header-account-manage li ul li.email {
+    width: 100%;
+    border-top: #2D2D2D solid 1px;
+    background-color: #000;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+    height: 24px;
+    line-height: 24px;
+}
+/*******************************************************************************
+ * Homepage staticstics
+ ******************************************************************************/
+.homepage-statistics {
+    border: #6C91A3 solid 1px;
+    padding: 20px 0;
+    border-radius: 5px;
+    background-color: #87B3D4;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.homepage-statistics .inner {
+    padding: 0;
+    margin: 0;
+}
+.homepage-statistics a {
+    color: #FFF;
+}
+.homepage-statistics a:hover {
+    text-decoration: none;
+}
+.homepage-statistics li {
+    width: 33.33%;
+    display: block;
+    float: left;
+}
+.homepage-statistics li.added-fans {
+
+}
+.homepage-statistics .title {
+    display: block;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.homepage-statistics .number {
+    font-weight: 400;
+    font-style: normal;
+    vertical-align: middle;
+    font-size: 35px;
+}
+.homepage-statistics .icon {
+    width: 54px;
+    height: 46px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.homepage-statistics .icon-new-message {
+    background: url("../images/homepage-statistics.png") 0 0 no-repeat;
+    margin-top: 8px;
+}
+.homepage-statistics .icon-add-fans {
+    background: url("../images/homepage-statistics.png") 0 -56px no-repeat;
+}
+.homepage-statistics .icon-total-fans {
+    background: url("../images/homepage-statistics.png") 0 -112px no-repeat;
+}
+/*******************************************************************************
+ * 操作菜单按钮
+ ******************************************************************************/
+#menu-buttons {
+    background: url(../images/dot.gif) repeat-x left bottom;
+    padding: 6px 0;
+}
+#menu-buttons ul {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+}
+#menu-buttons li {
+    display: block;
+    float: left;
+}
+#menu-buttons li a {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    background-image: url(../images/menu-buttons.png);
+    background-repeat: no-repeat;
+    background-position: 0 -114px;
+    padding-left: 10px;
+    margin: 0 5px;
+}
+#menu-buttons li a em {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    background-image: url(../images/menu-buttons.png);
+    background-repeat: no-repeat;
+    background-position: 100% -114px;
+    padding-right: 10px;
+}
+#menu-buttons a {
+    cursor: pointer;
+}
+#menu-buttons li.active a,
+#menu-buttons li a:hover {
+    background-position: 0 -44px;
+    text-decoration: none;
+    color: #FFF;
+}
+#menu-buttons li.active a em,
+#menu-buttons li a:hover em {
+    background-position: 100% -44px;
+}
+/*******************************************************************************
+ * Member profile
+ ******************************************************************************/
+.member-profile {}
+.member-profile .avatar {
+    width: 80px;
+    float: left;
+    display: block;
+    margin-left: 10px;
+}
+.member-profile .avatar img {
+    width: 55px;
+    height: 55px;
+}
+.member-profile .misc {
+    float: left;
+    display: block;
+}
+.member-profile .misc h1 {
+    margin: 0 0 5px 0;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;        
+}
+.member-profile .misc h1 a {
+    font-weight: normal;
+    margin-left: 20px;
+}
+.member-profile .misc p {
+    font-size: 12px;
+    color: #CCC;
+}
+/*******************************************************************************
+ * Quick filters 
+ ******************************************************************************/
+.quick-filters {
+    display: block;
+    border-bottom: #E9E9E9 solid 1px;
+    padding: 10px;
+    background: #F5F5F5;
+}
+.quick-filters a {
+    margin: 0 10px -1px 10px;
+}
+/*******************************************************************************
+ * Flat tabs
+ ******************************************************************************/
+.flat-tabs {
+    display: block;
+    border-bottom: #E9E9E9 solid 1px;
+    padding: 10px 10px 0 10px;
+    background: #F5F5F5;
+}
+.flat-tabs a {
+    margin: 0 10px -1px 10px;
+    display: inline-block;
+    float: left;
+    padding: 3px 5px;
+}
+.flat-tabs a.active {
+    font-weight: bold;
+    border-bottom: #205081 solid 2px;
+}
+.flat-tabs a:hover {
+    text-decoration: none;
+}
+/*******************************************************************************
+ * Toolbar
+ ******************************************************************************/
+.toolbar {
+    border-bottom: #E9E9E9 solid 1px;
+    background-color: #FFF;
+    padding: 5px;
+    border-left: #ffd351 solid 3px;
+}
+.toolbar li {
+    display: block;
+    float: left;
+}
+.toolbar li a {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    background-image: url("../images/tasks-btn-bg.png");
+    background-repeat: no-repeat;
+    background-position: 0 -114px;
+    padding-left: 10px;
+    margin: 0 5px;
+}
+.toolbar li a em {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    background-image: url("../images/tasks-btn-bg.png");
+    background-repeat: no-repeat;
+    background-position: 100% -114px;
+    padding-right: 10px;
+}
+.toolbar a {
+    cursor: pointer;
+}
+.toolbar li.active a,
+.toolbar li a:hover {
+    background-position: 0 -44px;
+    text-decoration: none;
+    color: #FFF;
+}
+.toolbar li.active a em,
+.toolbar li a:hover em {
+    background-position: 100% -44px;
+}
+/*******************************************************************************
+ * Inner body header
+ ******************************************************************************/
+.inner-body-header {
+    border-bottom: #E9E9E9 solid 1px;
+    padding: 10px 10px 10px 40px;
+    background: #F5F5F5 url("../images/inner-body-header.png") no-repeat 10px 50%;
+    font-weight: bold;
+    font-size: 14px;
+}
+.inner-body-header span {
+    margin-right: 10px;
+    float: right;
+}
+/*******************************************************************************
+ * Issues control panel
+ ******************************************************************************/
+.control-panel {}
+.control-panel .inner {
+    padding: 10px;
+}
+.control-panel .inner .welcome {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: #E3E3E3 solid 1px;
+    color: #6bb05f;
+    letter-spacing: 5px;
+}
+.control-panel .btn a {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    border: #E3E3E3 solid 1px;
+    background: #F8F8F8;
+    text-align: center;
+    border-radius: 4px;
+}
+.control-panel .btn a:hover {
+    border: #CCC solid 1px;
+}
+.control-panel .title {
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #4362BF;
+    font-size: 14px;
+    border-bottom: #FFF solid 1px;
+}
+.control-panel .filter {
+    background: url("../images/filter.png") no-repeat left center;
+    padding-left: 20px;
+    border-top: #E9E9E9 solid 1px;
+}
+.control-panel .filter .setting {
+    float: right;
+    background: url('../images/icons.png') no-repeat -3217px -16px!important;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: 7px 0;
+}
+.control-panel .shortcut {
+    background: url("../images/khotkeys.png") no-repeat left center;
+    padding-left: 20px;
+}
+.control-panel .shortcuts {
+    border-bottom: #FFF solid 1px;
+    border-top: #E9E9E9 solid 1px;
+    padding: 5px 0;
+}
+.control-panel .shortcuts li {
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    text-align: left;
+    padding-right: 20px;
+    background: url("../images/shortcut-small.png") no-repeat left center;
+    padding-left: 20px;
+}
+.control-panel .shortcuts li i {
+    margin-left: 10px;
+}
+.control-panel .shortcuts li.active {
+    border: #E9E9E9 solid 1px;
+    border-left: #d04437 solid 3px;
+    margin: 0 -11px 0 -8px;
+    padding-left: 25px;
+    border-right: #FFF solid 1px;
+    background-color: #FFF;
+    background-position-x: 5px;
+}
+/*******************************************************************************
+ * 图片素材
+ ******************************************************************************/
+.material-images {}
+.material-images li {
+    margin: 5px;
+    display: inline-block;
+    float: left;
+}
+.material-images li .filename {
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #999999;
+    width: 192px;
+    overflow: hidden;
+}
+.material-images li .image {
+    border: #CCC solid 1px;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+    margin: 0 auto;   
+}
+.material-images li .image img {
+    width: 180px;
+    height: 100px;
+}
+.material-images li .buttons {
+    border: #CCC solid 1px;
+    border-top: none;
+    height: 16px;
+    padding: 5px 0;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+}
+.material-images li .buttons span {
+    display: block;
+    width: 62px;
+    text-align: center;
+    float: left;
+    border-right: #CCC solid 1px;
+}
+.material-images li .buttons span.last {
+    border-right: none;
+}
+/*******************************************************************************
+ * Account register login form
+ ******************************************************************************/
+#form-account-reg-login {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    padding: 10px 10px 0 10px;
+    width: 400px;
+    margin: 0 auto;
+}
+#form-account-reg-login .success {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: #FFF;
+}
+#form-account-reg-login .errorMessage {
+    border: none;
+    padding-left: 130px;
+    background: #FFF url("../images/error.png") no-repeat 110px center;
+}
+#form-account-reg-login .hd {
+    border-bottom: #ccc solid 1px;
+    margin-bottom: 10px;
+    background: url("../images/account-reg-login.png") no-repeat left center;
+    padding-left: 40px;
+}
+#form-account-reg-login .hd h1 {
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    margin: 0;
+}
+#form-account-reg-login .bd {}
+#form-account-reg-login .bd .entry {
+    margin-bottom: 10px;
+    display: block;
+}
+#form-account-reg-login .bd .error {
+    margin-bottom: 0;
+}
+#form-account-reg-login .bd .entry input.g-text {
+    width: 240px;
+    padding: 8px 4px;
+}
+#form-account-reg-login .bd .entry label {
+    width: 70px;
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px 15px 5px 5px;
+    margin-right: 5px;
+    position: relative;
+    padding-left: 10px;
+    margin-left: 10px;
+    text-align: right;
+    color: #999999;
+    clear: both;
+    float: none;
+}
+#form-account-reg-login .bd .entry label.auto {
+    width: 160px;
+    text-align: left;
+    margin: 0;
+    padding: 0
+}
+#form-account-reg-login .bd .buttons {
+    padding-left: 115px;
+}
+#form-account-reg-login .bd .buttons .button {
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#form-account-reg-login .ft {
+    border-top: #CCC solid 1px;
+}
+.social-login-icons {
+    width: 245px;
+    margin: 0 auto;
+}
+.social-login-icons li {
+    display: inline-block;
+    margin: 10px 5px;
+    float: left;
+}
+/*******************************************************************************
+ * 瀑布流
+ ******************************************************************************/
+.waterfall {
+    display: block;
+}
+.waterfall .item {
+    position: relative;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    width: 300px;
+    margin: 10px;
+    display: inline-block;
+    box-shadow: 0 1px 3px rgba(34, 25, 25, .4);
+    -moz-box-shadow: 0 1px 3px rgba(34, 25, 25, .4);
+    -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, .4);
+    filter: progid:DXImageTransform.Microsoft.Shadow(color = #adacac, direction = 135, strength = 2);
+}
+.waterfall .item .title {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border-bottom: 1px solid #DFDFDF;
+    font-size: 12px;
+    line-height: 24px;
+    padding: 0 5px;
+    position: relative;
+    font-weight: bold;
+    font-size: 14px;
+    color: #4362BF;
+}
+.waterfall .item .post-date {
+    color: #999999;
+    height: 30px;
+    line-height: 30px;
+    padding-right: 5px;
+    border-top: #ccc solid 1px;
+}
+.waterfall .item .post-date a {
+    margin: 0 5px;
+}
+.waterfall .item .post-date span {
+    float: right;
+}
+.waterfall .item .image {
+    margin: 5px auto;
+}
+.waterfall .item .image img {
+    display: block;
+    width: 280px;
+    border: #ccc solid 1px;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+.waterfall .item .content {
+    line-height: 24px;
+    padding: 0 10px;
+    color: #666677;
+}
+.waterfall .item:hover {
+    box-shadow: 0 1px 5px rgba(34, 25, 25, .8);
+    -moz-box-shadow: 0 1px 5px rgba(34, 25, 25, .8);
+    -webkit-box-shadow: 0 1px 5px rgba(34, 25, 25, .8);
+    filter: progid:DXImageTransform.Microsoft.Shadow(color = #979797, direction = 135, strength = 3);
+}
+/*******************************************************************************
+ * Message list
+ ******************************************************************************/
+.messages-list {}
+.messages-list li.message {
+    display: block;
+    border-bottom: #ccc solid 1px;
+    padding: 10px 0 10px 20px;
+    background: url("../images/message.png") no-repeat left center;
+}
+.messages-list li.message .request {
+    display: block;
+}
+.messages-list li.message .request .misc {
+    border-bottom: #E9E9E9 solid 1px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+.messages-list li.message .request .misc .operation {
+    float: right;
+    margin-left: 10px;
+}
+.messages-list li.message .request .misc .operation .quick-reply {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/reply.png") no-repeat center center;
+    font-size: 0;
+}
+.messages-list li.message .request .misc .operation .star {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/pinned.png") no-repeat center center;
+    font-size: 0;
+}
+.messages-list li.message .request .misc .operation .unstar {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/unpin.png") no-repeat center center;
+    font-size: 0;
+}
+.messages-list li.message .request .open-id {
+    margin-right: 10px;
+}
+.messages-list li.message .request .request-date {
+    float: right;
+    color: #999999;
+}
+.messages-list li.message .reply {
+    padding: 10px 50px;
+}
+.messages-list li.message .reply .reply-content textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 3px;
+    border: #E9E9E9 solid 1px;
+    border-top: #E9E9E9 solid 3px;
+    padding: 10px;
+}
+.messages-list li.message .reply .reply-submit {
+    margin-top: 10px;
+}
+/*******************************************************************************
+ * Notices widget
+ ******************************************************************************/
+.widget-common {
+    border: #D0D1D3 solid 1px;
+    border-radius: 5px;
+}
+.widget-common .hd {
+    border-bottom: #D0D1D3 solid 1px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    background: #ececec url("../images/notice.png") no-repeat 5px center;
+}
+.widget-common .bd {
+    padding: 10px;
+}
+/*******************************************************************************
+ * 应用列表
+ ******************************************************************************/
+.applications-list {}
+.applications-list li {
+    display: inline-block;
+    float: left;
+    margin: 0 10px 10px 10px;
+}
+.applications-list li .title {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.applications-list li .icon {
+    width: 128px;
+    height: 128px;
+}
+.applications-list li .icon img {
+    width: 128px;
+    height: 128px;
+}
+/*******************************************************************************
+ * Footer
+ ******************************************************************************/
+#footer {
+    margin: 0 auto;
+    text-align: right;
+    color: #666666;
+    padding: 10px;
+}
+#footer p {
+    margin: 0;
+    padding: 0;
+}
+#footer a {
+    color: #666666;
+    margin: 0 12px;
+    text-decoration: none;
+}

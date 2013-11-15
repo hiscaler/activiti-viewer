@@ -1,0 +1,199 @@
+/* Grid view */
+.grid-view-loading {
+    background: url("../images/loading.gif") no-repeat;
+}
+.grid-view {}
+.grid-view table.items {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    margin-bottom: 0;
+    border: #E9E9E9 solid 1px;
+}
+.grid-view table.items th, .grid-view table.items td {
+    border-bottom: 1px #E9E9E9 solid;
+    border-right: 1px #E9E9E9 solid;
+    font-size: 12px;
+    padding: 6px 5px;
+}
+.grid-view table.items th {
+    background: url("../images/grid-view-sprites.png") repeat-x -34px 0;
+    padding: 8px 4px;
+    color: #7d8389;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: bold;
+}
+.grid-view table.items th a {
+    color: #7d8389;
+    font-weight: bold;
+    text-decoration: none;
+}
+.grid-view table.items th a:hover {
+    color: #3b5998;
+}
+.grid-view table.items th a.asc {
+    background: url("../images/up.gif") right center no-repeat;
+    padding-right: 10px;
+}
+.grid-view table.items th a.desc {
+    background: url("../images/down.gif") right center no-repeat;
+    padding-right: 10px;
+}
+.grid-view table.items tr.even {
+    background: #FFF;
+}
+.grid-view table.items tr.odd {
+    background: #FAFCFF;
+}
+.grid-view table.items tr.selected td {
+    background: #FFFFEF;
+}
+.grid-view table.items tr.selected td.first {
+    background: url("../images/grid-view-sprites.png") no-repeat 0 -57px;
+}
+.grid-view table.items td.last,
+.grid-view table.items th.last {
+    border-right: none;
+}
+.grid-view table.items tr:hover {
+    background: #ECFBD4;
+}
+.grid-view table.items tr td img {
+    border: none;
+    vertical-align: middle;
+}
+.grid-view .link-column img {
+    border: 0;
+}
+.grid-view .button-column {
+    text-align: center;
+}
+.grid-view .button-column img {
+    border: 0;
+}
+.grid-view .checkbox-column {
+    width: 15px;
+}
+.grid-view .summary {
+    margin: 0 0 5px 0;
+    line-height: 31px;
+    padding-right: 10px;
+    text-align: right;
+}
+.grid-view .pager {}
+.grid-view .empty {
+    background: #FFFCC9 url("../images/notice.png") no-repeat 5px center;
+    width: 100%;
+    padding: 2px 5px 2px 25px;
+    height: 24px;
+    line-height: 24px;
+}
+.grid-view tr.filters td {
+    padding: 2px 0 2px 5px;
+    margin: 0;
+}
+.grid-view .filters input {
+    background: url("../images/input-bg.png") repeat-x scroll 0 -130px #fff;
+    border: 1px solid #E9E9E9;
+    padding: 4px 5px;
+}
+.grid-view table.items td.center {
+    text-align: center;
+}
+.grid-view table.items td.pk {
+    width: 50px;
+    background: #F5F5F5;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #999;
+}
+.grid-view table.items td.pk a {
+    color: #999;
+}
+.grid-view table.items td.date {
+    width: 65px;
+    text-align: center;
+}
+.grid-view table.items td.datetime {
+    width: 145px;
+    text-align: center;
+}
+.grid-view table.items td.begin-end-date {
+    width: 180px;
+    text-align: center;
+}
+.grid-view table.items td.username {
+    width: 60px;
+    text-align: center;
+}
+.grid-view table.items td.kind {
+    width: 80px;
+    text-align: center;
+}
+.grid-view table.items td.priority {
+    width: 40px;
+    text-align: center;
+}
+.grid-view table.items td.date-time-ago {
+    width: 85px;
+    text-align: center;
+}
+.grid-view table.items td.ip-address {
+    width: 96px;
+    text-align: center;
+}
+.grid-view table.items td.ordering {
+    width: 40px;
+    text-align: center;
+}
+.grid-view table.items td.icon {
+    width: 34px;
+    text-align: center;
+}
+.grid-view table.items td.yes-no {
+    width: 30px;
+    text-align: center;
+}
+.grid-view table.items td.number {
+    width: 60px;
+    text-align: center;
+}
+.grid-view table.items td.chars {
+    width: 60px;
+    text-align: center;
+}
+.grid-view table.items td.status-text {
+    width: 45px;
+    text-align: center;
+}
+.grid-view table.items td.id-card-number {
+    width: 130px;
+}
+.grid-view table.items td.subsidy-type {
+    width: 60px;
+    text-align: center;
+}
+.grid-view table.items td a.preview {
+    padding-left: 20px;
+    background: url("../images/preview.gif") no-repeat;
+}
+.grid-view table.items th.actions, .grid-view table.items td.actions {
+    background: #FFFFEF;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.grid-view table.items td a.float-update {
+    padding-right: 20px;
+}
+.grid-view table.items td a.float-update:hover {
+    background: url("../images/update.png") no-repeat right center;
+}
+.grid-view table.items td.btn { width: 20px; _width: 30px; }
+.grid-view table.items td.btn-2 { width: 40px; _width: 40px; }
+.grid-view table.items td.btn-3 { width: 60px; _width: 70px; }
+.grid-view table.items td.btn-4 { width: 80px; _widht: 90px; }
+.grid-view table.items td.btn-5 { width: 100px; _widht: 110px; }
