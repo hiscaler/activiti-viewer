@@ -2,6 +2,12 @@
 
 class Activiti {
 
+    public static function getTables() {
+        $tables = Yii::app()->db->schema->getTableNames();
+        asort($tables);
+        return $tables;
+    }
+
     public static function getTableColumns($table) {
         if (!empty($table)) {
             return Yii::app()->db->schema->getTable($table)->columnNames;

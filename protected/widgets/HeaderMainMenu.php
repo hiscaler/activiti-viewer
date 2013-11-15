@@ -28,7 +28,8 @@ class HeaderMainMenu extends DbWidget {
             array(
                 'label' => 'Settings',
                 'url' => array('settings/index'),
-                'active' => $controllerName == 'settings'
+                'active' => $controllerName == 'settings',
+                'visible' => $controllerName == 'settings',
             ),
         );
     }

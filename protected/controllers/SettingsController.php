@@ -6,11 +6,11 @@ class SettingsController extends Controller {
     public $layout = 'settings';
 
     public function actionIndex($table = null) {
-        if (!empty($table)) {
+        if (!empty($table) && in_array($table, Activiti::getTables())) {
             $columns = $this->getTableColumns($table);
             $this->title .= " [ {$table} ]";
         } else {
-            $columns = array();
+            throw new CHttpException(400, '无效的请求，请不要重复执行。');
         }
 
         $this->render('index', array(
