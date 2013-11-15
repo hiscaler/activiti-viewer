@@ -8,7 +8,6 @@ class SiteController extends Controller {
      */
     public function actionIndex() {
         $this->redirect(array('runtime/'));
-        $this->render('index');
     }
 
     /**
