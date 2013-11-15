@@ -7,22 +7,8 @@ class SiteController extends Controller {
      * when an action is not explicitly requested by users.
      */
     public function actionIndex() {
-        $sql = 'SELECT * FROM ACT_RU_TASK';
-        $count = $this->dbConnection->createCommand('SELECT COUNT(*) FROM ACT_RU_TASK')->queryScalar();
-        $dataProvider = new CSqlDataProvider($sql, array(
-            'keyField' => 'ID_',
-            'sort' => array(
-                'defaultOrder' => 'CREATE_TIME_ DESC',
-            ),
-            'totalItemCount' => $count,
-            'pagination' => array(
-                'pageSize' => self::PAGE_SIZE,
-            ),
-        ));
-
-        $this->render('index', array(
-            'dataProvider' => $dataProvider,
-        ));
+        $this->redirect(array('runtime/'));
+        $this->render('index');
     }
 
     /**
