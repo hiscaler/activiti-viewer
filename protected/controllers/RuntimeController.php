@@ -4,7 +4,7 @@ class RuntimeController extends Controller {
 
     public $layout = 'runtime';
     public $title = 'Runtime';
-    public $defaultAction = 'executions';
+    public $defaultAction = 'tasks';
 
     public function actionExecutions() {
         $this->title = 'Runtime Executions';
