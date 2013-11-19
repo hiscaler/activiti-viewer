@@ -31,6 +31,11 @@ class HeaderMainMenu extends DbWidget {
                 'active' => $controllerName == 'settings',
                 'visible' => $controllerName == 'settings',
             ),
+            array(
+                'label' => '.NET',
+                'url' => array('dotNet/index'),
+                'active' => $controllerName == 'dotNet',
+            ),
         );
     }
 
